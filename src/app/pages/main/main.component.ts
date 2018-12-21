@@ -18,7 +18,6 @@ export class MainComponent implements OnInit {
    this.getData(this.page);
   }
   getData(page) {
-    debugger
     this.peopleData.getPeople(page).subscribe((res) => {
       this.count = this.peopleData.count;
       this.filteredUsers = res;
