@@ -1,2 +1,6 @@
+<!--<app-star-wars></app-star-wars>-->
+<mat-card class="example-card">
+<mat-checkbox class="example-margin" [(ngModel)]="checked" (change)="showHuman($event)">Human</mat-checkbox>
 
 <app-table-people [filteredUsers]="filteredUsers" [count]="count" (nextPage)="getData($event)"></app-table-people>
+</mat-card>

@@ -39,6 +39,7 @@ export class PeopleTableComponent implements OnInit {
       this.page--;
     }
     this.nextPage.emit(this.page);
+
   }
 }
 

@@ -3,7 +3,7 @@
   top: 30%;
   left: 35%;
   z-index: 1;
-  animation: intro 6s ease-out 1s;
+  animation: intro 0s ease-out 1s;
   color: rgb(75, 213, 238);
   font-weight: 400;
   font-size: 300%;
@@ -22,50 +22,20 @@
   }
   100% {
     opacity: 0;
+    display: none;
   }
 }
 
 /* Set the animation & hide the logo */
-.logo {
-  position: relative;
-  top: 20%;
-  z-index: 1;
-  transform: scale(0.8);
-  margin: auto;
-  -webkit-animation: 18s ease 0s normal forwards 1 fadein;
-  animation: 18s ease 0s normal forwards 1 fadein;
-}
-.preview .logo {
-  position: absolute;
-  top: 20%;
-  left: 45%;
-  z-index: 1;
-  margin: auto;
-  animation: logo 7s ease-out 9s;
-  opacity: 0;
-}
+
+
 
 .logo svg {
   width: inherit;
 }
 
 /* Scale the logo down and maintain it centered */
-@keyframes logo {
-  0% {
-    width: 18em;
-    transform: scale(2.75);
-    opacity: 1;
-  }
-  50% {
-    opacity: 1;
-    width: 18em;
-  }
-  100% {
-    opacity: 0;
-    transform: scale(0.1);
-    width: 18em;
-  }
-}
+
 
 p {
   color: #FFFF82;
@@ -118,8 +88,9 @@ p {
 .data-delay {
   display: flex;
   flex-direction: column;
-  -webkit-animation: 18s ease 0s normal forwards 1 fadein;
-  animation: 18s ease 0s normal forwards 1 fadein;
+  align-items: center;
+  -webkit-animation: 0s ease 0s normal forwards 1 fadein;
+  animation: 0s ease 0s normal forwards 1 fadein;
 }
 
 
