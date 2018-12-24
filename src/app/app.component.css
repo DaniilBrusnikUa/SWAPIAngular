@@ -13,29 +13,32 @@
 @keyframes intro {
   0% {
     opacity: 0;
+    transform: scale(1);
   }
   20% {
     opacity: 1;
+    transform: scale(1);
   }
   90% {
     opacity: 1;
+    transform: scale(1);
+  }
+  90% {
+    opacity: 0;
+    transform: scale(1);
   }
   100% {
-    opacity: 0;
-    display: none;
+    transform: scale(0);
   }
 }
 
 /* Set the animation & hide the logo */
-
-
 
 .logo svg {
   width: inherit;
 }
 
 /* Scale the logo down and maintain it centered */
-
 
 p {
   color: #FFFF82;
@@ -93,15 +96,26 @@ p {
   animation: 0s ease 0s normal forwards 1 fadein;
 }
 
-
-@keyframes fadein{
-  0% { opacity:0; }
-  66% { opacity:0; }
-  100% { opacity:1; }
+@keyframes fadein {
+  0% {
+    opacity: 0;
+  }
+  66% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
-@-webkit-keyframes fadein{
-  0% { opacity:0; }
-  66% { opacity:0; }
-  100% { opacity:1; }
+@-webkit-keyframes fadein {
+  0% {
+    opacity: 0;
+  }
+  66% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }

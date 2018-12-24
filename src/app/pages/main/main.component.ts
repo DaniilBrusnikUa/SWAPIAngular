@@ -8,33 +8,31 @@ import {AsyncDataService} from '../../services/async-services/async-data.service
 })
 export class MainComponent implements OnInit {
 
-  filteredUsers: any;
+  allPeople: any;
   count: number;
   page = 1;
   checked = false;
+  film = {};
 
   constructor(private peopleData: AsyncDataService) {
   }
 
   ngOnInit() {
     this.getData(this.page);
+    for (let i = 1; i < 8; i++) {
+      this.peopleData.getFilms(i);
+    }
   }
 
   getData(page) {
     this.page = page;
     this.peopleData.getPeople(page).subscribe((res) => {
       this.count = this.peopleData.count;
-      this.filteredUsers = res;
+      this.allPeople = res;
+    });
+    this.peopleData.filmsArray.subscribe((res) => {
+      this.film = res;
     });
   }
-
-  showHuman() {
-    if (this.checked) {
-      this.filteredUsers = this.filteredUsers.filter((item) => {
-        return item.gender === 'male' || item.gender === 'female';
-      });
-    } else {
-      this.getData(this.page);
-    }
-  }
 }
+

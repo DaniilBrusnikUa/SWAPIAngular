@@ -14,6 +14,11 @@ const routes: Routes = [
     path: '',
     loadChildren: 'src/app/pages/main/main.module#MainModule'
   },
+  {
+    path: 'character/:id',
+    loadChildren: 'src/app/pages/profile/profile.module#ProfileModule'
+  },
+
 ];
 
 

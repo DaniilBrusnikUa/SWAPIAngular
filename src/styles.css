@@ -1,4 +1,4 @@
-
+@import "~nouislider/distribute/nouislider.min.css";
 @import "~@angular/material/prebuilt-themes/indigo-pink.css";
 html {
   height: 100%;
@@ -6,7 +6,21 @@ html {
   overflow: hidden;
 }
 .mat-card {
-  width: 660px !important;
+  width: 960px !important;
+}
+.mat-card-header-text {
+  margin: 0 !important;
+}
+.ng2-nouislider {
+  width: 200px ;
+  margin: 0 20px 0 20px ;
+}
+.noUi-connect {
+  background: #3f62b8;
+}
+.noUi-handle {
+  border-radius: 11px !important;
+
 }
 #stars {
   width: 1px;
