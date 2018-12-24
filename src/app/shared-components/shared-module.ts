@@ -3,7 +3,7 @@ import {NgModule} from '@angular/core';
 import {CommonModule} from '@angular/common';
 import {RouterModule} from '@angular/router';
 
-import {MatCheckboxModule, MatPaginatorModule, MatSelectModule, MatSliderModule, MatTableModule} from '@angular/material';
+import {MatCheckboxModule, MatListModule, MatPaginatorModule, MatSelectModule, MatSliderModule, MatTableModule} from '@angular/material';
 import {PeopleTableComponent} from './table/people-table.component';
 import {StarWarsComponent} from './start-wars/star-wars.component';
 import {FormsModule} from '@angular/forms';
@@ -30,11 +30,9 @@ import {NouisliderModule} from 'ng2-nouislider';
     FormsModule,
     MatSelectModule,
     MatSliderModule,
-    NouisliderModule
+    NouisliderModule,
 
-    /*
-        PipeModule.forRoot()
-    */
+
   ],
 
   providers: []

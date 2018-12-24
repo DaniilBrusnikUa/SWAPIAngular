@@ -24,8 +24,10 @@
   <table mat-table [dataSource]="dataSource">
 
     <!-- Gender Column -->
+
     <ng-container matColumnDef="gender">
       <th mat-header-cell *matHeaderCellDef> Gender</th>
+
       <td mat-cell *matCellDef="let element"> {{element.gender}}</td>
     </ng-container>
 

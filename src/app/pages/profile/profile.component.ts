@@ -35,7 +35,6 @@ export class ProfileComponent implements OnInit {
       for (const filmUrl of res.films) {
         this.peopleData.getFilm(filmUrl);
       }
-      ;
       for (const spaceshipsUrl of res.starships) {
         this.peopleData.getSpaceships(spaceshipsUrl);
       }
@@ -43,11 +42,13 @@ export class ProfileComponent implements OnInit {
       this.characterData = res;
     });
     this.peopleData.filmArray.subscribe((films) => {
-      this.characterFilms.push(films);
-    });
-    this.peopleData.SpaceshipsArray.subscribe((films) => {
       if (films) {
-        this.characterSpaceships.push(films);
+        this.characterFilms.push(films);
+      }
+    });
+    this.peopleData.SpaceshipsArray.subscribe((spaceship) => {
+      if (spaceship) {
+        this.characterSpaceships.push(spaceship);
 
       }
     });
